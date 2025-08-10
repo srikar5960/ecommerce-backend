@@ -66,6 +66,12 @@ public class ProductController {
         return productRepository.findAll();
     }
 
+    @GetMapping("/")
+    public String home() {
+    return "E-commerce backend running";
+    }
+    
+
     // Fetch products by category
     @GetMapping("/{category}")
     public List<Product> getProductsByCategory(@PathVariable String category) {
