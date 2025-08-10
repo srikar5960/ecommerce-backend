@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("api/products")
 @CrossOrigin(origins = "*")
 public class ProductController {
 
@@ -64,11 +64,6 @@ public class ProductController {
     @GetMapping
     public List<Product> getAllProducts() {
         return productRepository.findAll();
-    }
-
-    @GetMapping("/")
-    public String home() {
-    return "E-commerce backend running";
     }
     
 
